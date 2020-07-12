@@ -1,6 +1,19 @@
 {
-    "HOME": {
-      "TITLE": "Hello Arjun this is English language..!",
-      "SENTENCE": "The quick brown fox jumps over the lazy dog"
-    }
+  "login": {
+    "signin": "Sign In",
+    "forgtpasswd": "Forgot Password",
+    "usernmoremail": "Username or Email",
+    "passwd": "Password",
+    "rstpasswd": "Reset Password"
+  },
+  "admin-menu": {
+    "construction": "Construction",
+    "environmental": "Environmental",
+    "medical": "Medical",
+    "logout": "Log Out"
+  },
+  "unauthorized": {
+    "title": "You do not have permission to access this page.",
+    "subtitle": "Please contact the Site Administrator to request access."
   }
+}
