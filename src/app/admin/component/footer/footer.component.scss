@@ -1,0 +1,19 @@
+@import '../../../../styles.scss';
+
+.footer {
+    background-color: $headfoot;
+    color: $white;
+    padding: 20px 0px;
+    flex-direction: row;
+}
+
+div a {
+    text-decoration: none;
+    color: yellow;
+}
+
+@media all and (max-width: 480px) { 
+    .footer {
+        flex-direction: column;
+    }
+}
