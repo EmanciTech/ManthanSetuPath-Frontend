@@ -12,6 +12,11 @@
     "medical": "Medical",
     "logout": "Log Out"
   },
+  "client-menu": {
+    "construction": "Construction",
+    "environmental": "Environmental",
+    "medical": "Medical"
+  },
   "unauthorized": {
     "title": "You do not have permission to access this page.",
     "subtitle": "Please contact the Site Administrator to request access."
