@@ -10,7 +10,12 @@
     "construction": "Construction",
     "environmental": "Environmental",
     "medical": "Medical",
+    "server": "Server",
     "logout": "Log Out"
+  },
+  "dashboard": {
+    "dataset": "DataSet",
+    "category": "Category"
   },
   "client-menu": {
     "construction": "Construction",

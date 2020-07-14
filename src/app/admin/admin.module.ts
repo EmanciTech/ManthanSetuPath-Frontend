@@ -9,6 +9,7 @@ import { EnvironmentalComponent } from './component/environmental/environmental.
 import { MedicalComponent } from './component/medical/medical.component';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TranslateModule } from '@ngx-translate/core';
     ContentComponent,
     ConstructionComponent,
     EnvironmentalComponent,
-    MedicalComponent
+    MedicalComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,
