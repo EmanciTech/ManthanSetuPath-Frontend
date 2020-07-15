@@ -1,20 +1,41 @@
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" [routerLink]="'/admin'">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+  <div class="collapse navbar-collapse" id="navbarToggler">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="[{ outlets: { 'admin': ['construction'] } }]">{{ 'admin-menu.construction' | translate }} <span class="sr-only">(current)</span></a>
+      <li class="nav-item active desktop">
+        <a class="nav-link"
+          [routerLink]="[{ outlets: { 'admin': ['construction'] } }]">{{ 'admin-menu.construction' | translate }} <span
+            class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="[{ outlets: { 'admin': ['environmental'] } }]">{{ 'admin-menu.environmental' | translate }} <span class="sr-only">(current)</span></a>
+      <li class="nav-item active desktop">
+        <a class="nav-link"
+          [routerLink]="[{ outlets: { 'admin': ['environmental'] } }]">{{ 'admin-menu.environmental' | translate }}
+          <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="[{ outlets: { 'admin': ['medical'] } }]">{{ 'admin-menu.medical' | translate }} <span class="sr-only">(current)</span></a>
+      <li class="nav-item active desktop">
+        <a class="nav-link"
+          [routerLink]="[{ outlets: { 'admin': ['medical'] } }]">{{ 'admin-menu.medical' | translate }} <span
+            class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active mobile" data-toggle="collapse" data-target="#navbarToggler">
+        <a class="nav-link"
+          [routerLink]="[{ outlets: { 'admin': ['construction'] } }]">{{ 'admin-menu.construction' | translate }} <span
+            class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active mobile" data-toggle="collapse" data-target="#navbarToggler">
+        <a class="nav-link"
+          [routerLink]="[{ outlets: { 'admin': ['environmental'] } }]">{{ 'admin-menu.environmental' | translate }}
+          <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active mobile" data-toggle="collapse" data-target="#navbarToggler">
+        <a class="nav-link"
+          [routerLink]="[{ outlets: { 'admin': ['medical'] } }]">{{ 'admin-menu.medical' | translate }} <span
+            class="sr-only">(current)</span></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

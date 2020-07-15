@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-3 col-md-6 col-sm-6">
-      <div class="card card-stats">
+      <div class="card card-stats pointer" [routerLink]="[{ outlets: { 'admin': ['construction'] } }]">
         <div class="card-body ">
           <div class="row">
             <div class="col-5 col-md-4">
@@ -28,7 +28,7 @@
       </div>
     </div>
     <div class="col-lg-3 col-md-6 col-sm-6">
-      <div class="card card-stats">
+      <div class="card card-stats pointer" [routerLink]="[{ outlets: { 'admin': ['environmental'] } }]">
         <div class="card-body ">
           <div class="row">
             <div class="col-5 col-md-4">
@@ -55,7 +55,7 @@
       </div>
     </div>
     <div class="col-lg-3 col-md-6 col-sm-6">
-      <div class="card card-stats">
+      <div class="card card-stats pointer" [routerLink]="[{ outlets: { 'admin': ['medical'] } }]">
         <div class="card-body ">
           <div class="row">
             <div class="col-5 col-md-4">
