@@ -2,13 +2,36 @@ $background: #f5f5f5;
 $headfoot: #343a40;
 $white: #ffffff;
 $blue: #30a0ff;
+$headerButtonColor: #ffe484;
+$headerButtonTextColor: #2a2730;
+// $headerButtonColor: #17a2b8;
+// $headerButtonTextColor: #ffffff;
+$constrTable: #5d71e4;
+$envTable: #347235;
+$medicTable: #c47451;
 
 .background {
   background-color: $background;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .flex {
   display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-4 {
+  flex: 4;
+}
+
+.flex-10 {
+  flex: 10;
 }
 
 .fx-dirc-c {
@@ -27,8 +50,16 @@ $blue: #30a0ff;
   justify-content: space-around;
 }
 
+.just-con-sb {
+  justify-content: space-between;
+}
+
 .align-item-c {
   align-items: center;
+}
+
+.align-item-fe {
+  align-items: flex-end;
 }
 
 .w-100 {

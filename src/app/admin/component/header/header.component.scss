@@ -1,10 +1,30 @@
+@import '../../../../styles.scss';
+
 .btn-outline {
-  color: #ffe484;
-  border-color: #ffe484;
+  color: $headerButtonColor;
+  border-color: $headerButtonColor;
 }
 
 .btn-outline:hover {
-  color: #2a2730;
-  background-color: #ffe484;
-  border-color: #ffe484;
+  color: $headerButtonTextColor;
+  background-color: $headerButtonColor;
+  border-color: $headerButtonColor;
+}
+
+.desktop {
+  display: list-item;
+}
+
+.mobile {
+  display: none;
+}
+
+@media all and (max-width: 991px) {
+  .desktop {
+    display: none;
+  }
+  
+  .mobile {
+    display: list-item;
+  }
 }

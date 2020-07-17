@@ -1,0 +1,54 @@
+@import '../../../../styles.scss';
+
+.text-primary {
+  color: $envTable !important;
+}
+
+h6 {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.card {
+  margin: 20px auto;
+}
+
+.card-header {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #f8f9fc;
+  border-bottom: 1px solid #e3e6f0;
+}
+
+.shadow {
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
+}
+
+.form-input {
+  flex: 4.5;
+  margin-right: 20px;
+}
+
+.btn {
+  font-weight: 600;
+}
+
+.btn-success {
+  color: $white;
+  background-color: $envTable;
+  border-color: $envTable;
+}
+
+.table-bordered thead th {
+  background: $envTable;
+  color: $white;
+}
+
+.white-icon {
+  color: $white;
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+}
