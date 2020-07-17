@@ -1,9 +1,10 @@
 @import '../../../../styles.scss';
 
+
+
 .header {
   height: 100px;
   background-color: $headfoot;
-  font-size: 100%;
 }
 
 .headerCotent {
@@ -14,12 +15,14 @@
   transform: translateY(-50%);
   margin-left: 20px;
   margin-right: 20px;
+  font-size: 1rem;
 }
 
 .rightEmail {
   color: $white;
   text-decoration: none;
   float: right;
+ 
 }
 
 .header a:hover {
@@ -31,7 +34,7 @@
     color: $white;
   }
 }
-
-.bg-light {
-  background-color: #333333;
+ ::ng-deep .bg-light{
+background-color: red;
 }
+
