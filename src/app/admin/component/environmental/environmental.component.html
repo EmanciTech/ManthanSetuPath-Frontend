@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="card-body">
-      <div class="table-responsive">
+      <div *ngIf="categories.length" class="table-responsive">
         <table class="table table-bordered table-hover" width="100%" cellspacing="0">
           <thead>
             <tr>
@@ -21,9 +21,9 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td class="text-c">1</td>
-              <td class="text-c">Environmental Category</td>
+            <tr *ngFor="let category of categories">
+              <td class="text-c">{{category['id']}}</td>
+              <td class="text-c">{{category['category']}}</td>
               <td class="text-c">
                 <button type="button" class="btn btn-info">
                   <i class="fas fa-edit white-icon"></i>
@@ -37,6 +37,84 @@
             </tr>
           </tbody>
         </table>
+      </div>
+      <div *ngIf="!categories.length" class="flex just-con-c align-item-c">
+        <h5 class="no-object">No Category Found</h5>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="categories.length" class="card shadow mb-4">
+    <div class="card-header py-3 flex flex-wrap">
+      <div class="col-xs-12 col-sm-12 col-md-7">
+        <div class="flex align-item-c just-con-sb flex-wrap select-div">
+          <span class="text-primary font-w-500 col-sm-3 col-md-3">Category &nbsp; </span>
+          <select class="custom-select col-sm-9 col-md-9">
+            <option *ngFor="let category of categories" value="category['category']">{{category['category']}}</option>
+          </select>
+        </div>
+        <br>
+        <div class="flex align-item-c just-con-sb flex-wrap">
+          <span class="text-primary font-w-500 col-sm-3 col-md-3">Name &nbsp; </span>
+          <input type="text" class="form-control form-input col-sm-9 col-md-9" placeholder="Service Name">
+        </div>
+        <br>
+        <div class="flex align-item-c just-con-sb flex-wrap">
+          <span class="text-primary font-w-500 col-sm-3 col-md-3">Description &nbsp; </span>
+          <textarea type="text" class="form-control form-input col-sm-9 col-md-9" rows="3"
+            placeholder="Service Description"></textarea>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="flex fx-dirc-c align-item-c just-con-sb">
+          <img class="rounded img-fluid" [src]="imageSrc">
+          <div type="button" class="btn btn-success btn-block hide-input-div">Upload Image
+            <input type="file" class="hide-input" (change)="onSelectImage($event)">
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-2 flex align-item-c">
+        <button type="button" class="btn btn-success btn-block">Add</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div *ngIf="services.length" class="table-responsive">
+        <table class="table table-bordered table-hover" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th class="text-c">Index</th>
+              <th class="text-c">Image</th>
+              <th class="text-c">Category</th>
+              <th class="text-c">Service Name</th>
+              <th class="text-c">Service Description</th>
+              <th class="text-c">Edit</th>
+              <th class="text-c">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let service of services">
+              <td class="text-c">{{service['id']}}</td>
+              <td class="text-c table-image">
+                <img class="rounded img-fluid" [src]="service['image']">
+              </td>
+              <td class="text-c">{{service['category']}}</td>
+              <td class="text-c">{{service['name']}}</td>
+              <td class="text-c">{{service['description']}}</td>
+              <td class="text-c">
+                <button type="button" class="btn btn-info">
+                  <i class="fas fa-edit white-icon"></i>
+                </button>
+              </td>
+              <td class="text-c">
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">
+                  <i class="fas fa-trash-alt white-icon"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="!services.length" class="flex just-con-c align-item-c">
+        <h5 class="no-object">No Service Found</h5>
       </div>
     </div>
   </div>
