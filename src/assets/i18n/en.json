@@ -7,9 +7,9 @@
     "rstpasswd": "Reset Password"
   },
   "admin-menu": {
-    "construction": "Construction",
-    "environmental": "Environmental",
-    "medical": "Medical",
+    "construction": "CONSTRUCTION",
+    "environmental": "ENVIRONMENTAL",
+    "medical": "MEDICAL",
     "server": "Server",
     "logout": "Log Out"
   },
