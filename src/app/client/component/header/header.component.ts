@@ -8,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  tiger: any = ['harsh','sdsdf','sdfsdf'];
   constructor() { }
 
   ngOnInit(): void {
+    console.log(typeof(this.tiger));
   }
 
 }

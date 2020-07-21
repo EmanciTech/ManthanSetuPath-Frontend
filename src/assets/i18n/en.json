@@ -20,7 +20,9 @@
   "client-menu": {
     "construction": "Construction",
     "environmental": "Environmental",
-    "medical": "Medical"
+    "medical": "Medical",
+    "AboutUs":"About Us",
+    "ContactUs": "Contact Us"
   },
   "unauthorized": {
     "title": "You do not have permission to access this page.",
