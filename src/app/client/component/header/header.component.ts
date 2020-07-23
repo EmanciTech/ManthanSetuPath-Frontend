@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var $: any;
 
 
 @Component({
@@ -8,11 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  tiger: any = ['harsh','sdsdf','sdfsdf'];
   constructor() { }
 
   ngOnInit(): void {
-    console.log(typeof(this.tiger));
+   
+ }
+   
+   
   }
 
-}
+  // make navbar top andd fix based on window scroll 
+  $(window).scroll(function(){
+    var sticky = $('.navbar'),
+        scroll = $(window).scrollTop();
+  
+    if (scroll >= 30) sticky.addClass('sticky');
+    else sticky.removeClass('sticky');
+  });

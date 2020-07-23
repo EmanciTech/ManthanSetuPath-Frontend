@@ -1,8 +1,38 @@
 @import '../../../../styles.scss';
 
 .header {
-  background-color: $white;
-  font-size: medium;
+  background-color: $headfoot;
+  font-size: 14px;
+  font-family: $fontFamily;
+}
+
+.nav-link {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 0px;
+  margin: 0px 15px;
+  display: inline-block;
+  position: relative;
+  color: $white !important;
+  opacity: 0.7;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+::ng-deep .navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-lin {
+  opacity: 1 !important;
 }
 
 .leftPart {
@@ -12,7 +42,7 @@
 
 .rightEmail a {
   text-decoration: none;
-  color: $headfoot;
+  color: $white;
 }
 
 .header a:hover {
@@ -31,16 +61,33 @@
   color: $headfoot;
 }
 
-::ng-deep .bg-light {
-  background-color: $blue !important;  
+::ng-deep .navbar {
+  top: 60px;
 }
-::ng-deep .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-lin{
-  color: $background !important;
-}
-::ng-deep .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
 
-  opacity: 3 !important;
+::ng-deep .bg-light {
+  background-color: $blue !important;
 }
-::ng-deep .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link{
-  color: $white !important;
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 3.5rem;
+    padding-left: .5rem;
+  }
+
+}
+
+@media (max-width: 992px) {
+  .header {
+    font-size: 12px;
+  }
+
+  .logo {
+    width: 70px;
+    margin-left: -5px;
+  }
+
+  ::ng-deep .navbar {
+    top: 49px;
+  }
 }
