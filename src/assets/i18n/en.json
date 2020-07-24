@@ -24,6 +24,19 @@
     "AboutUs":"About Us",
     "ContactUs": "Contact Us"
   },
+  "AboutUs":{
+    "RoadMapTitle":"ROADMAP TO SUCCESS",
+    "RoadMapDescription1":"We aim to achieve long term sustainable growth PMC Contractor by adding true value to our customers and empowering them with cutting edge engineering, cost effective procurement and class construction services topped with our numerous years of Civil Engineering experience. We strive to be true partners to all our customers and help them achieve success through our innovative solutions.",
+    "RoadMapDescription2":" We strive to be true partners to all our customers and help them achieve success through our innovative solutions.",
+    "Awards":"Awards & Certificates",
+    "AwardsDescription":"Lean Six Sigma green Belt",
+    "DirectorDesk":"Director Desk",
+    "DirectorDeskDescription":"Mr. Er. Vijay Kumar Sharma Determined Civil Engineer, farsighted businessman. Er. Vijay Kumar Sharma established Manthan Setu Path Engineer & Consultant in Gujarat in 2020."
+
+  },
+  "Service": {
+    "ServiceTitle":"Services"
+  },
   "unauthorized": {
     "title": "You do not have permission to access this page.",
     "subtitle": "Please contact the Site Administrator to request access."

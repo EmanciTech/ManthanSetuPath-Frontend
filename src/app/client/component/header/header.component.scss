@@ -4,18 +4,23 @@
   background-color: $headfoot;
   font-size: 14px;
   font-family: $fontFamily;
+  position: relative;
 }
 
 .nav-link {
-  font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 0px;
   margin: 0px 15px;
   display: inline-block;
-  position: relative;
   color: $white !important;
   opacity: 0.7;
+}
+
+.navbar .phone {
+  color: $white;
+  text-decoration: none;
+  cursor: auto;
 }
 
 .nav-link:hover {
@@ -33,11 +38,7 @@
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .show>.nav-lin {
   opacity: 1 !important;
-}
-
-.leftPart {
-  display: flex;
-  align-items: center
+  font-weight: 700;
 }
 
 .rightEmail a {
@@ -45,7 +46,7 @@
   color: $white;
 }
 
-.header a:hover {
+.rightEmail a:hover {
   color: #999;
 }
 
@@ -56,13 +57,8 @@
   align-items: center
 }
 
-.logo a {
-  text-decoration: none;
-  color: $headfoot;
-}
-
 ::ng-deep .navbar {
-  top: 60px;
+ z-index: 11111;
 }
 
 ::ng-deep .bg-light {

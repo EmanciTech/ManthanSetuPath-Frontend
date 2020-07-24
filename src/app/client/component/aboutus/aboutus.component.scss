@@ -1,35 +1,34 @@
 @import '../../../../styles.scss';
 
-
-.carousel-item img {
-  max-width: 100%;
-  height: 574px;
-}
-
 .ProductFeaturesTitle {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 90px;
+  padding-top: 110px;
   padding-bottom: 0px;
   background-color: #ffffff;
   position: relative;
 }
+
 .align-center {
   text-align: center;
 }
+
 .align-left {
   text-align: left;
 }
+
 .display-2 {
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
 }
-.ProductFeaturesTitle .normal{
-  font-weight: bold;
-  font-size: 48px;
+
+.ProductFeaturesTitle .normal {
+  font-weight: 600;
+  font-size: 45px;
 }
-.ProductFeatures{
+
+.ProductFeatures {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,24 +37,49 @@
   background-color: #ffffff;
   position: relative;
 }
-.image-element img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
+
+.image-element .img-fluid {
+  width: 50%;
 }
+
 .ProductFeatures .text-content {
   padding: 3rem;
 }
+
 .ProductFeatures .mbr-title {
   color: #e96188;
 }
+
 .btn-info {
   background-color: $headfoot;
   color: $white;
 }
-.btn-info:hover {
-    background-color: $blue;
-    color: $white;
-  }
 
+.mbr-section-text p {
+  line-height: 28px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+// li {
+//   padding-left: 1.3em;
+// }
+li:before {
+  content: "*";
+  /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  font-weight: 900;
+  display: inline-block;
+  margin-left: -2em;
+  /* same as padding-left set on li */
+  width: 1.3em;
+  /* same as padding-left set on li */
+  color: $blue;
+}
+
+.fa {
+  font-size: 180px;
+}

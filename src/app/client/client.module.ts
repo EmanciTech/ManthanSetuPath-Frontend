@@ -6,9 +6,12 @@ import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { ContentComponent } from './component/content/content.component';
 import { TranslateModule } from '@ngx-translate/core';
-import { ConstructionComponent } from './construction/construction.component';
-import { EnvironmentalComponent } from './environmental/environmental.component';
-import { MedicalComponent } from './medical/medical.component';
+import { ClientConstructionComponent } from './component/client-construction/client-construction.component';
+import { ClientEnvironmentalComponent } from './component/client-environmental/client-environmental.component';
+import { ClientMedicalComponent } from './component/client-medical/client-medical.component';
+import { AboutusComponent } from './component/aboutus/aboutus.component';
+import { ContactusComponent } from './component/contactus/contactus.component';
+
 
 
 @NgModule({
@@ -16,10 +19,7 @@ import { MedicalComponent } from './medical/medical.component';
     ClientComponent, 
     HeaderComponent, 
     FooterComponent, 
-    ContentComponent, 
-    ConstructionComponent, 
-    EnvironmentalComponent, 
-    MedicalComponent],
+    ContentComponent, ClientConstructionComponent, ClientEnvironmentalComponent, ClientMedicalComponent, AboutusComponent, ContactusComponent],
   imports: [
     CommonModule,
     RouterModule,
