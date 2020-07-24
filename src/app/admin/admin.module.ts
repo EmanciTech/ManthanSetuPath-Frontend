@@ -10,6 +10,8 @@ import { MedicalComponent } from './component/medical/medical.component';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { DashboardComponent } from './component/dashboard/dashboard.component';
   imports: [
     CommonModule,
     RouterModule,
-    TranslateModule
+    TranslateModule,
+    HttpClientModule,
+    FormsModule
   ]
 })
 export class AdminModule { }
