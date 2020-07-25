@@ -22,6 +22,7 @@ export class EnvironmentalComponent implements OnInit {
   public serviceName = '';
   public serviceDescription = '';
   public serviceObj = {};
+  public process = false;
 
   constructor(private service: DataService) { }
 
@@ -90,6 +91,7 @@ export class EnvironmentalComponent implements OnInit {
 
   removeCategory(category) {
     this.categoryObj = category;
+    this.serviceObj = null;
   }
 
   deleteCategory() {
@@ -110,10 +112,12 @@ export class EnvironmentalComponent implements OnInit {
   }
 
   getServices() {
+    this.process = true;
     this.service.getServices(this.collection)
       .subscribe(
         data => {
           this.services = data['data'];
+          this.process = false;
         },
         error => {
           console.log(error);
@@ -122,6 +126,7 @@ export class EnvironmentalComponent implements OnInit {
   }
 
   addServices() {
+    this.process = true;
     const service = {
       name: this.serviceName,
       description: this.serviceDescription
@@ -151,6 +156,7 @@ export class EnvironmentalComponent implements OnInit {
   }
 
   updateService() {
+    this.process = true;
     const service = {
       name: this.serviceName,
       description: this.serviceDescription
@@ -177,6 +183,7 @@ export class EnvironmentalComponent implements OnInit {
   }
 
   deleteService() {
+    this.process = true;
     let data = {
       collection: this.collection,
       id: this.serviceObj['_id'],
