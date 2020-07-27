@@ -85,7 +85,7 @@
       </div>
     </div>
     <div class="card-body">
-      <div *ngIf="services.length" class="table-responsive">
+      <div *ngIf="services.length && !process" class="table-responsive">
         <table class="table table-bordered table-hover" width="100%" cellspacing="0">
           <thead>
             <tr>
@@ -122,8 +122,11 @@
           </tbody>
         </table>
       </div>
-      <div *ngIf="!services.length" class="flex just-con-c align-item-c">
+      <div *ngIf="!services.length && !process" class="flex just-con-c align-item-c">
         <h5 class="no-object">No Service Found</h5>
+      </div>
+      <div *ngIf="process" class="flex just-con-c align-item-c">
+        <img class="loader-width" src="assets/images/process.gif">
       </div>
     </div>
   </div>
