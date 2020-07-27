@@ -4,10 +4,15 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 110px;
+  padding-top: 100px;
   padding-bottom: 0px;
   background-color: #ffffff;
   position: relative;
+}
+
+.normal {
+  font-weight: 600;
+  font-size: 45px;
 }
 
 .align-center {
@@ -21,11 +26,6 @@
 .display-2 {
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
-}
-
-.ProductFeaturesTitle .normal {
-  font-weight: 600;
-  font-size: 45px;
 }
 
 .ProductFeatures {
@@ -64,16 +64,13 @@ ul {
   padding: 0;
 }
 
-// li {
-//   padding-left: 1.3em;
-// }
 li:before {
   content: "*";
   /* FontAwesome Unicode */
   font-family: FontAwesome;
   font-weight: 900;
   display: inline-block;
-  margin-left: -2em;
+  margin-left: -1.3em;
   /* same as padding-left set on li */
   width: 1.3em;
   /* same as padding-left set on li */

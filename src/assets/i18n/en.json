@@ -34,6 +34,17 @@
     "DirectorDeskDescription":"Mr. Er. Vijay Kumar Sharma Determined Civil Engineer, farsighted businessman. Er. Vijay Kumar Sharma established Manthan Setu Path Engineer & Consultant in Gujarat in 2020."
 
   },
+  "Contactus":{
+    
+    "phone":"Phone",
+    "email":"email:jindalsrjt@gmail.com",
+    "GetinTouch":"Get in touch",
+    "Email":"Email",
+    "name":"Name",
+    "message":"Message",
+    "submit":"Submit"
+
+  },
   "Service": {
     "ServiceTitle":"Services"
   },

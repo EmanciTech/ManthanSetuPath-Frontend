@@ -1,0 +1,88 @@
+@import '../../../../styles.scss';
+
+.ProductFeaturesTitle {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 0px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.normal {
+  font-weight: 600;
+  font-size: 45px;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.btn-info {
+  background-color: $headfoot;
+  color: $white;
+}
+
+.ContactUssection {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: #ffffff
+}
+
+.google-map {
+  height: 25rem;
+  position: relative;
+}
+
+.google-map iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.display-2 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 3rem;
+}
+
+.pb-3 {
+
+  font-size: 2rem;
+}
+
+.icon-block {
+  margin-bottom: 10px;
+  display: -webkit-flex;
+
+}
+
+.display-7 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
+}
+
+.mbr-text {
+  color: #767676;
+}
+
+.btn-info:hover {
+  background-color: $blue;
+  color: $white;
+}
+
+ul li {
+  display: inline;
+  list-style: none;
+  font-size: 35px;
+  padding-left:10px
+}
+ul{
+  padding-left:0px;
+}
+.fa-facebook-square, .fa-twitter-square {
+  color:$blue;
+}
