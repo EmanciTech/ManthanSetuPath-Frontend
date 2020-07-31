@@ -28,10 +28,10 @@ const routes: Routes = [
   {
     path: 'admin', component: AdminComponent, canActivate: [AuthGuard],
     children: [
-      { path: '', component: DashboardComponent, outlet: 'admin', canActivate: [AuthGuard] },
-      { path: 'construction', component: ConstructionComponent, outlet: 'admin' },
-      { path: 'environmental', component: EnvironmentalComponent, outlet: 'admin' },
-      { path: 'medical', component: MedicalComponent, outlet: 'admin' }
+      { path: '', component: DashboardComponent, canActivate: [AuthGuard] },
+      { path: 'construction', component: ConstructionComponent },
+      { path: 'environmental', component: EnvironmentalComponent },
+      { path: 'medical', component: MedicalComponent }
     ]
   },
   { path: 'unauthorized', component: UnauthorizedComponent },

@@ -12,32 +12,32 @@
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active desktop">
         <a class="nav-link nav-link-fade-up" (click)="changeMenu('construction')" [ngClass]="{'active': (menu == 'construction')}"
-          [routerLink]="[{ outlets: { 'admin': ['construction'] } }]">{{ 'admin-menu.construction' | translate }} <span
+          [routerLink]="'construction'">{{ 'admin-menu.construction' | translate }} <span
             class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active desktop">
         <a class="nav-link nav-link-fade-up" (click)="changeMenu('environmental')" [ngClass]="{'active': (menu == 'environmental')}"
-          [routerLink]="[{ outlets: { 'admin': ['environmental'] } }]">{{ 'admin-menu.environmental' | translate }}
+          [routerLink]="'environmental'">{{ 'admin-menu.environmental' | translate }}
           <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active desktop">
         <a class="nav-link nav-link-fade-up" (click)="changeMenu('medical')" [ngClass]="{'active': (menu == 'medical')}"
-          [routerLink]="[{ outlets: { 'admin': ['medical'] } }]">{{ 'admin-menu.medical' | translate }} <span
+          [routerLink]="'medical'">{{ 'admin-menu.medical' | translate }} <span
             class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active mobile" data-toggle="collapse" data-target="#navbarToggler">
         <a class="nav-link"
-          [routerLink]="[{ outlets: { 'admin': ['construction'] } }]">{{ 'admin-menu.construction' | translate }} <span
+          [routerLink]="'construction'">{{ 'admin-menu.construction' | translate }} <span
             class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active mobile" data-toggle="collapse" data-target="#navbarToggler">
         <a class="nav-link"
-          [routerLink]="[{ outlets: { 'admin': ['environmental'] } }]">{{ 'admin-menu.environmental' | translate }}
+          [routerLink]="'environmental'">{{ 'admin-menu.environmental' | translate }}
           <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active mobile" data-toggle="collapse" data-target="#navbarToggler">
         <a class="nav-link"
-          [routerLink]="[{ outlets: { 'admin': ['medical'] } }]">{{ 'admin-menu.medical' | translate }} <span
+          [routerLink]="'medical'">{{ 'admin-menu.medical' | translate }} <span
             class="sr-only">(current)</span></a>
       </li>
     </ul>
