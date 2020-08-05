@@ -52,6 +52,11 @@
   "Service": {
     "ServiceTitle": "Services"
   },
+  "otherService":{
+    "TenderingWork":"Tendering Work",
+    "BidEvaluationWork":"Bid Evaluation Work",
+    "GemRegistrationandBiddingonGemWork":"Gem Registration and Bidding on Gem Work"
+  },
   "unauthorized": {
     "title": "You do not have permission to access this page.",
     "subtitle": "Please contact the Site Administrator to request access."

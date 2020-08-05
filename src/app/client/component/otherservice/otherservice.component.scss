@@ -1,0 +1,85 @@
+@import '../../../../styles.scss';
+
+.ProductFeaturesTitle {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 0px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.normal {
+  font-weight: 600;
+  font-size: 45px;
+  border-bottom: 3px solid #e961a7;
+  display: inline-block;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.display-2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+}
+
+.ProductFeatures {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 60px;
+  padding-bottom: 45px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.image-element .img-fluid {
+  width: 100%;
+  height: 300px;
+}
+
+.ProductFeatures .text-content {
+  padding: 3rem;
+}
+
+.ProductFeatures .mbr-title {
+  color: #e96188;
+}
+
+.btn-info {
+  background-color: $headfoot;
+  color: $white;
+}
+
+.mbr-section-text p {
+  line-height: 28px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li:before {
+  content: "*";
+  /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  font-weight: 900;
+  display: inline-block;
+  margin-left: -1.3em;
+  /* same as padding-left set on li */
+  width: 1.3em;
+  /* same as padding-left set on li */
+  color: $blue;
+}
+
+.fa {
+  font-size: 180px;
+}

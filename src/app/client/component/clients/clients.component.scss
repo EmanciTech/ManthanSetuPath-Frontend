@@ -1,0 +1,54 @@
+@import '../../../../styles.scss';
+
+.ProductFeaturesTitle {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 0px;
+  position: relative;
+}
+
+.normal {
+  font-weight: 600;
+  font-size: 45px;
+  border-bottom: 3px solid #e961a7;
+  display: inline-block;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+
+.img-fluid {
+  height: 20vw;
+  
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: $headfoot;
+  color: $white;
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card:hover .overlay {
+  opacity: 2;
+}
+
+@media (max-width: 768px) {
+  .img-fluid {
+    height: auto;
+  }
+}
