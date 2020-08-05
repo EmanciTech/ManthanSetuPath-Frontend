@@ -1,6 +1,6 @@
 <div class="wrapper">
-  <nav id="sidebar">
-    <ul class="list-unstyled components">  
+  <nav id="sidebar" [ngClass]="{'active': togglers}">
+    <ul class="list-unstyled components">
       <li [ngClass]="{'active':  (selectedCategory == data.category) }" *ngFor="let data of Category">
         <a (click)="categoryClicked(data.category)">{{data.category}}</a>
       </li>
@@ -9,17 +9,18 @@
   <div id="content">
     <div class='container'>
       <div class='row'>
-        <i class="fa fa-bars" aria-hidden="true" id="sidebarCollapse"></i>
+          <i class="fa fa-bars pointer" aria-hidden="true" (click)="toggle();"></i>
       </div>
     </div>
     <div class='container mt-2'>
       <div class='row' *ngIf="CategoryList.length > 0">
         <div class='col-md-4' *ngFor="let item of CategoryList">
           <div class="card mb-4 mt-4">
-            <img class="card-img-top" alt="image_1"  [src]="'http://127.0.0.1:3000' + item['image']"
+            <img class="card-img-top" alt="image_1" [src]="'http://127.0.0.1:3000' + item['image']"
               data-holder-rendered="true">
-              <div class="overlay">{{item.name}}</div>
+            <div class="overlay">{{item.name}}</div>
             <div class="card-body">
+              <h5 class="card-title">{{item.name}}</h5>
               <p class="card-text">{{item.description}}.</p>
             </div>
           </div>

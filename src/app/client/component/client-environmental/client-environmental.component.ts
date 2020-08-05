@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataService } from '../../service/data.service';
+import { ActivatedRoute } from '@angular/router';
 declare var $: any;
 
 @Component({
@@ -9,17 +10,21 @@ declare var $: any;
   styleUrls: ['./client-environmental.component.scss']
 })
 export class ClientEnvironmentalComponent implements OnInit {
-  public Category:any = [];
-  public CategoryList:any = [];
+  public Category: any = [];
+  public CategoryList: any = [];
   public selectedCategory = '';
   public catName: any = {};
+  public togglers = false;
 
-  constructor(private router: Router, private service: DataService) { }
+  constructor(private router: Router, private service: DataService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.getCategoryList();
-    this.selectedCategory = decodeURI(this.router.url.slice(15));
-    this.categoryClicked(this.selectedCategory);
+    this.activatedRoute.url.subscribe((url: any) => {
+      this.getCategoryList();
+      this.selectedCategory = decodeURI(this.router.url.slice(15));
+      this.categoryClicked(this.selectedCategory);
+    });
+
   }
 
 
@@ -41,6 +46,9 @@ export class ClientEnvironmentalComponent implements OnInit {
       error => {
         console.log(error);
       });
+  }
+  toggle() {
+    this.togglers = !this.togglers;
   }
 }
 
