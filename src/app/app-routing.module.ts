@@ -15,16 +15,26 @@ import { ClientEnvironmentalComponent } from './client/component/client-environm
 import { ClientMedicalComponent } from './client/component/client-medical/client-medical.component';
 import { AboutusComponent } from './client/component/aboutus/aboutus.component';
 import { ContactusComponent } from './client/component/contactus/contactus.component';
+import { HomeComponent } from './client/component/home/home.component';
+import { ClientsComponent } from './client/component/clients/clients.component';
+import { OtherserviceComponent } from './client/component/otherservice/otherservice.component';
+import { ServiceComponent} from './client/component/service/service.component';
 import { from } from 'rxjs';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', component: ClientComponent },
-  { path: 'admin-login', component: LoginComponent},
-  { path: 'construction', component: ClientConstructionComponent},
-  { path: 'environmental', component: ClientEnvironmentalComponent},
-  { path: 'medical', component: ClientMedicalComponent},
-  { path: 'aboutus', component: AboutusComponent},
-  { path: 'contactus', component: ContactusComponent},
+  {
+    path: '', component: ClientComponent,
+    children: [
+      { path: '', component: HomeComponent },
+      { path: 'aboutus', component: AboutusComponent },
+      { path: 'contactus', component: ContactusComponent },
+      { path: 'clients', component: ClientsComponent },
+      { path: 'otherservice', component: OtherserviceComponent },
+      { path: 'medical/:servicename', component: ClientMedicalComponent },
+      { path: 'environmental/:servicename', component: ClientEnvironmentalComponent },
+      { path: 'construction/:servicename', component: ClientConstructionComponent }
+    ]
+  },
   {
     path: 'admin', component: AdminComponent, canActivate: [AuthGuard],
     children: [

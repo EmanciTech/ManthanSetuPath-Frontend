@@ -13,6 +13,8 @@
 .normal {
   font-weight: 600;
   font-size: 45px;
+  border-bottom: 3px solid #e961a7;
+  display: inline-block;
 }
 
 .align-center {
@@ -60,10 +62,7 @@
 
 }
 
-.display-7 {
-  font-family: 'Rubik', sans-serif;
-  font-size: 1rem;
-}
+
 
 .mbr-text {
   color: #767676;
@@ -74,15 +73,37 @@
   color: $white;
 }
 
-ul li {
+
+.Contacticon li {
   display: inline;
   list-style: none;
-  font-size: 35px;
-  padding-left:10px
+  font-size: 44px;
+  padding-left: 10px
 }
-ul{
-  padding-left:0px;
+
+.Contacticon {
+  padding-left: 0px;
+ 
 }
-.fa-facebook-square, .fa-twitter-square {
-  color:$blue;
+.ContactInfo li{
+  margin-top: 2px;
+  list-style: none;
+}
+.ContactInfo{
+  margin-left: -25px;
+}
+
+.display-7 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
+}
+
+.fa-facebook-square,
+.fa-twitter-square {
+  color: $headfoot;
+}
+
+.fa-facebook-square:hover,
+.fa-twitter-square:hover {
+  color: $blue;
 }

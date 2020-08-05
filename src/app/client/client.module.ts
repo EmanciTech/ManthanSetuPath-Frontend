@@ -11,6 +11,10 @@ import { ClientEnvironmentalComponent } from './component/client-environmental/c
 import { ClientMedicalComponent } from './component/client-medical/client-medical.component';
 import { AboutusComponent } from './component/aboutus/aboutus.component';
 import { ContactusComponent } from './component/contactus/contactus.component';
+import { HomeComponent } from './component/home/home.component';
+import { OtherserviceComponent } from './component/otherservice/otherservice.component';
+import { ClientsComponent } from './component/clients/clients.component';
+import { ServiceComponent } from './component/service/service.component';
 
 
 
@@ -19,7 +23,7 @@ import { ContactusComponent } from './component/contactus/contactus.component';
     ClientComponent, 
     HeaderComponent, 
     FooterComponent, 
-    ContentComponent, ClientConstructionComponent, ClientEnvironmentalComponent, ClientMedicalComponent, AboutusComponent, ContactusComponent],
+    ContentComponent, ClientConstructionComponent, ClientEnvironmentalComponent, ClientMedicalComponent, AboutusComponent, ContactusComponent, HomeComponent, OtherserviceComponent, ClientsComponent, ServiceComponent],
   imports: [
     CommonModule,
     RouterModule,

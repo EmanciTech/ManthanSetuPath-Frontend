@@ -1,11 +1,38 @@
-<div class="flex fx-dirc-c root">
-    <div class="flex-shrink">
-      <app-header></app-header>
-    </div>
-    <div class="flex-expand background mt">
-        <p>client-construction works!</p>
+<div class="wrapper">
+  <nav id="sidebar">
+    <ul class="list-unstyled components">  
+      <li [ngClass]="{'active':  (selectedCategory == data.category) }" *ngFor="let data of Category">
+        <a (click)="categoryClicked(data.category)">{{data.category}}</a>
+      </li>
+    </ul>
+  </nav>
+  <div id="content">
+    <div class='container'>
+      <div class='row'>
+        <i class="fa fa-bars" aria-hidden="true" id="sidebarCollapse"></i>
       </div>
-    <div class="flex-shrink">
-      <app-footer></app-footer>
+    </div>
+    <div class='container mt-2'>
+      <div class='row' *ngIf="CategoryList.length > 0">
+        <div class='col-md-4' *ngFor="let item of CategoryList">
+          <div class="card mb-4 mt-4">
+            <img class="card-img-top" alt="image_1"  [src]="'http://127.0.0.1:3000' + item['image']"
+              data-holder-rendered="true">
+              <div class="overlay">{{item.name}}</div>
+            <div class="card-body">
+              <p class="card-text">{{item.description}}.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='row' *ngIf="CategoryList.length == 0">
+        <div class='col-sm-12'>
+          <div class="card mt-4  justify-content-center">
+            <div class="card-body">
+              <b> No Service added for this category.</b>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>

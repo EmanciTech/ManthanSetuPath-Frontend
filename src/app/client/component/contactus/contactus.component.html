@@ -1,7 +1,4 @@
 <div class="flex fx-dirc-c root">
-  <div class="flex-shrink">
-    <app-header></app-header>
-  </div>
   <div class="flex-expand mt">
     <!--service title start-->
     <section class='ProductFeaturesTitle'>
@@ -30,17 +27,19 @@
             <h5 class="pb-3 align-left display-2">
               {{ 'Contactus.GetinTouch' | translate }}
             </h5>
-            <ul class='align-left '>
+            <ul class='align-left Contacticon'>
               <li><a href='#'> <i class="fab fa-facebook-square"></i></a></li>
               <li> <a href='#'><i class="fab fa-twitter-square"></i></a></li>
             </ul>
 
             <div class="icon-block pb-3">
-
-              <p class="mbr-text align-left  display-7">
-                {{ 'Contactus.phone' | translate }}: +91-8320693151<br />
-                {{ 'Contactus.email' | translate }}
-              </p>
+            
+              <ul class='align-left display-7 ContactInfo'>
+                <li> <i class="fa fa-address-book" aria-hidden="true"></i> {{'Contactus.Address' | translate}}</li>
+                <li> <i class="fa fa-phone" aria-hidden="true"></i> {{ 'Contactus.phone' | translate }}:
+                  +91-8320693151</li>
+                <li> <i class="fa fa-envelope"></i> {{ 'Contactus.email' | translate }}</li>
+              </ul>
             </div>
             <form>
               <div class="form-group">
@@ -69,8 +68,5 @@
       </div>
     </section>
 
-  </div>
-  <div class="flex-shrink">
-    <app-footer></app-footer>
   </div>
 </div>

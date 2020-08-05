@@ -13,32 +13,37 @@ export class HeaderComponent implements OnInit {
   public menu = '';
   public construction = [];
   public medical = [];
-  public environmental = [];
+  public environmental:any = {};
   constructor(private router: Router, private service: DataService) { }
 
   ngOnInit(): void {
-    if (!sessionStorage.getItem('construction') && !sessionStorage.getItem('construction') && !sessionStorage.getItem('construction')) {
-      this.getMenu();
-    } else {
-      this.construction = JSON.parse(sessionStorage.getItem('construction'));
-      this.medical = JSON.parse(sessionStorage.getItem('medical'));
-      this.environmental = JSON.parse(sessionStorage.getItem('environmental'));
-    }
-
-    if (this.router.url.includes('construction')) {
+   
+    this.getMenu();
+    console.log(this.router.url);
+    if (this.router.url.includes('/construction')) {
       this.menu = 'construction';
-    } else if (this.router.url.includes('environmental')) {
+    } else if (this.router.url.includes('/environmental')) {
       this.menu = 'environmental';
-    } else if (this.router.url.includes('medical')) {
+    } else if (this.router.url.includes('/medical')) {
       this.menu = 'medical';
-    } else if (this.router.url.includes('aboutus')) {
+    } else if (this.router.url.includes('/aboutus')) {
+    
       this.menu = 'aboutus';
     }
-    else if (this.router.url.includes('contactus')) {
+    else if (this.router.url.includes('/contactus')) {
       this.menu = 'contactus';
+    }
+    else if (this.router.url.includes('/clients')) {
+      this.menu = 'clients';
+    }
+    else if (this.router.url.includes('/otherservice')) {
+      this.menu = 'otherservice';
     }
   }
 
+  changeMenu(menu) {
+    this.menu = menu;
+  }
   getMenu() {
     this.service.getMenu()
       .subscribe(
@@ -46,6 +51,7 @@ export class HeaderComponent implements OnInit {
           this.construction = data['data']['construction'];
           this.medical = data['data']['medical'];
           this.environmental = data['data']['environmental'];
+         
           sessionStorage.setItem('construction', JSON.stringify(this.construction));
           sessionStorage.setItem('medical', JSON.stringify(this.medical));
           sessionStorage.setItem('environmental', JSON.stringify(this.environmental));
@@ -55,13 +61,25 @@ export class HeaderComponent implements OnInit {
         }
       );
   }
+  
 }
 
-// make navbar top andd fix based on window scroll 
-$(window).scroll(function () {
-  var sticky = $('.navbar'),
-    scroll = $(window).scrollTop();
 
-  if (scroll >= 60) sticky.addClass('sticky');
-  else sticky.removeClass('sticky');
+
+// make navbar top andd fix based on window scroll 
+
+$(document).ready(function () {
+  $(window).scroll(function () {
+    var sticky = $('.navbar'),
+      scroll = $(window).scrollTop();
+
+    if (scroll >= 60) sticky.addClass('sticky');
+    else sticky.removeClass('sticky');
+  });
+  $(".dropdown, .btn-group").hover(function () {
+    var dropdownMenu = $(this).children(".dropdown-menu");
+    if (dropdownMenu.is(":visible")) {
+      dropdownMenu.parent().toggleClass("open");
+    }
+  });
 });

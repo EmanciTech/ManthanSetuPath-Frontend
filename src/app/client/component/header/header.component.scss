@@ -14,7 +14,7 @@
   margin: 0px 15px;
   display: inline-block;
   color: $white !important;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .navbar .phone {
@@ -25,6 +25,7 @@
 
 .nav-link:hover {
   opacity: 1;
+  color: #ffffff;
 }
 
 .sticky {
@@ -57,8 +58,11 @@
   align-items: center
 }
 
-::ng-deep .navbar {
- z-index: 11111;
+// ::ng-deep .navbar {
+//   z-index: 11111;
+// }
+.headernav {
+  z-index: 11111;
 }
 
 ::ng-deep .bg-light {
@@ -67,7 +71,7 @@
 
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 3.5rem;
+    padding-right: 1.5rem;
     padding-left: .5rem;
   }
 
@@ -82,11 +86,42 @@
     width: 70px;
     margin-left: -5px;
   }
+}
 
-  ::ng-deep .navbar {
-    top: 49px;
+.maxWidth {
+  max-width: 200px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .imageHide{
+    display: none;
   }
 }
-.maxWidth{
-  max-width: 200px;
+
+@media screen and (min-width: 768px) {
+
+  .dropdown:hover .dropdown-menu,
+  .btn-group:hover .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu {
+    margin-top: 0;
+  }
+ 
+
+  .dropdown-toggle {
+    margin-bottom: 2px;
+  }
+
+  .navbar .dropdown-toggle,
+  .nav-tabs .dropdown-toggle {
+    margin-bottom: 0;
+  }
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: $blue;
+  color: $white;
 }

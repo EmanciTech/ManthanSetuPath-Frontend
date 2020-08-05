@@ -1,64 +1,79 @@
 <div class='header container-fluid'>
   <div class="row ">
     <div class='col-6'>
-      <div class='logo pointer' routerLink='/'>
+      <div class='logo pointer ' routerLink='/'>
           <img src='assets/images/logo.png' class='img-fluid'>
-          <img class="manthan" src="assets/images/manthan.png" class='img-fluid maxWidth' />
+          <img src="assets/images/manthan.png" class='img-fluid maxWidth imageHide' />
       </div>
+      
     </div>
-    <div class="ml-auto mr-3 align-self-center rightEmail">
-      <a href='mailto: jindalsrjt@gmail.com'>
+    <div class="col-6 align-self-center rightEmail">
+      <a href='mailto: manthansetu@gmail.com' class=' float-right'>
         <i class="fa fa-envelope"></i>
-        jindalsrjt@gmail.com
+        {{ 'global.email' | translate }}
       </a>
     </div>
   </div>
 </div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+<nav class="navbar headernav navbar-expand-lg navbar-light bg-light ">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
     aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <!-- <li class="nav-item">
-        <a class="nav-link" [ngClass]="{'active': (menu == 'construction')}" routerLink="/construction">
-          {{ 'client-menu.construction' | translate }} <span class="sr-only">(current)</span></a>
-      </li> -->
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link " *ngIf="construction.length == 0" (click)="changeMenu('construction')" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           {{ 'client-menu.construction' | translate }}
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
-          <a *ngFor="let construction of construction" class="dropdown-item" href="#">{{construction.category}}</a>
+        <a class="nav-link dropdown-toggle" (click)="changeMenu('construction')"  *ngIf="construction.length > 0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ 'client-menu.construction' | translate }}
+        </a>
+        <div class="dropdown-menu"  *ngIf="construction.length > 0" aria-labelledby="navbarDropdown" >
+          <a *ngFor="let construction of construction" class="dropdown-item" [routerLink]="'construction/'+  construction.category.trim()">{{construction.category}}</a>
         </div>
       </li>
       <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link"  *ngIf="environmental.length == 0" (click)="changeMenu('construction')" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ 'client-menu.environmental' | translate }}
+        </a>
+          <a class="nav-link dropdown-toggle" href="#"  *ngIf="environmental.length > 0" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             {{ 'client-menu.environmental' | translate }}
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown2" >
-            <a *ngFor="let environmental of environmental" class="dropdown-item" href="#">{{environmental.category}}</a>
+          <div class="dropdown-menu" *ngIf="environmental.length > 0" aria-labelledby="navbarDropdown2" >
+            <a *ngFor="let environmental of environmental" class="dropdown-item"  [routerLink]="'environmental/'+  environmental.category" >{{environmental.category}}</a>
           </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link" href="#" *ngIf="medical.length == 0" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           {{ 'client-menu.medical' | translate }}
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown3" >
-          <a *ngFor="let medical of medical" class="dropdown-item" href="#">{{medical.category}}</a>
+        <a class="nav-link dropdown-toggle" *ngIf="medical.length > 0" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ 'client-menu.medical' | translate }}
+        </a>
+        <div class="dropdown-menu" *ngIf="medical.length > 0" aria-labelledby="navbarDropdown3" >
+          <a *ngFor="let medical of medical" class="dropdown-item" [routerLink]="'medical/'+  medical.category">{{medical.category}}</a>
         </div>
     </li>
+    <li class="nav-item">
+      <a class="nav-link " [ngClass]="{'active': (menu == 'clients')}" (click)="changeMenu('clients')"  [routerLink]="'clients'">
+        {{ 'client-menu.Clients' | translate }}</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " [ngClass]="{'active': (menu == 'otherservice')}" (click)="changeMenu('otherservice')"  [routerLink]="'otherservice'">
+        {{ 'client-menu.OtherService' | translate }}</a>
+    </li>
       <li class="nav-item">
-        <a class="nav-link " [ngClass]="{'active': (menu == 'aboutus')}" routerLink="/aboutus">
+        <a class="nav-link " [ngClass]="{'active': (menu == 'aboutus')}" (click)="changeMenu('aboutus')" [routerLink]="'aboutus'">
           {{ 'client-menu.AboutUs' | translate }}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " [ngClass]="{'active': (menu == 'contactus')}" routerLink="/contactus">
+        <a class="nav-link " [ngClass]="{'active': (menu == 'contactus')}" (click)="changeMenu('contactus')"  [routerLink]="'contactus'">
           {{ 'client-menu.ContactUs' | translate }}</a>
       </li>
+     
     </ul>
     <a href="#" class='mr-1 phone'> <i class="fa fa-phone" aria-hidden="true"></i>
-      +91-8320693151</a>
+      {{ 'global.phone' | translate }}</a>
   </div>
 </nav>
