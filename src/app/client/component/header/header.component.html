@@ -2,10 +2,10 @@
   <div class="row ">
     <div class='col-4'>
       <div class='logo pointer ' routerLink='/'>
-          <img src='assets/images/logo.png' class='img-fluid'>
-          <img src="assets/images/manthan.png" class='img-fluid maxWidth imageHide' />
+        <img src='assets/images/logo.png' class='img-fluid'>
+        <img src="assets/images/manthan.png" class='img-fluid maxWidth imageHide' />
       </div>
-      
+
     </div>
     <div class="col-8 align-self-center rightEmail">
       <a href='mailto: manthansetu@gmail.com' class=' float-right'>
@@ -23,105 +23,106 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item dropdown desktop">
-        <a class="nav-link " *ngIf="construction.length == 0" (click)="changeMenu('construction')" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{ 'client-menu.construction' | translate }}
+        <a class="nav-link" *ngIf="Consultancy.length == 0" (click)="changeMenu('Consultancy')" href="#"
+          id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ 'client-menu.Consultancy' | translate }}
         </a>
-        <a class="nav-link dropdown-toggle" (click)="changeMenu('construction')"  *ngIf="construction.length > 0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{ 'client-menu.construction' | translate }}
+        <a class="nav-link dropdown-toggle" href="#" *ngIf="Consultancy.length > 0" id="navbarDropdown2" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ 'client-menu.Consultancy' | translate }}
         </a>
-        <div class="dropdown-menu"  *ngIf="construction.length > 0" aria-labelledby="navbarDropdown" >
-          <a *ngFor="let construction of construction" class="dropdown-item" [routerLink]="'construction/'+  construction.category.trim()">{{construction.category}}</a>
+        <div class="dropdown-menu" *ngIf="Consultancy.length > 0" aria-labelledby="navbarDropdown2">
+          <a *ngFor="let environmental of Consultancy" class="dropdown-item"
+            [routerLink]="'Consultancy/'+  Consultancy.category">{{environmental.category}}</a>
         </div>
       </li>
       <li class="nav-item dropdown desktop">
-        <a class="nav-link"  *ngIf="environmental.length == 0" (click)="changeMenu('construction')" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{ 'client-menu.environmental' | translate }}
+        <a class="nav-link " *ngIf="construction.length == 0" (click)="changeMenu('construction')" href="#"
+          id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ 'client-menu.construction' | translate }}
         </a>
-          <a class="nav-link dropdown-toggle" href="#"  *ngIf="environmental.length > 0" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{ 'client-menu.environmental' | translate }}
-          </a>
-          <div class="dropdown-menu" *ngIf="environmental.length > 0" aria-labelledby="navbarDropdown2" >
-            <a *ngFor="let environmental of environmental" class="dropdown-item"  [routerLink]="'environmental/'+  environmental.category" >{{environmental.category}}</a>
-          </div>
-      </li>
-      <li class="nav-item dropdown desktop">
-        <a class="nav-link" href="#" *ngIf="medical.length == 0" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{ 'client-menu.medical' | translate }}
+        <a class="nav-link dropdown-toggle" (click)="changeMenu('construction')" *ngIf="construction.length > 0"
+          href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ 'client-menu.construction' | translate }}
         </a>
-        <a class="nav-link dropdown-toggle" *ngIf="medical.length > 0" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{ 'client-menu.medical' | translate }}
-        </a>
-        <div class="dropdown-menu" *ngIf="medical.length > 0" aria-labelledby="navbarDropdown3" >
-          <a *ngFor="let medical of medical" class="dropdown-item" [routerLink]="'medical/'+  medical.category">{{medical.category}}</a>
+        <div class="dropdown-menu" *ngIf="construction.length > 0" aria-labelledby="navbarDropdown">
+          <a *ngFor="let construction of construction" class="dropdown-item"
+            [routerLink]="'construction/'+  construction.category.trim()">{{construction.category}}</a>
         </div>
-    </li>
-    <li class="nav-item desktop">
-      <a class="nav-link " [ngClass]="{'active': (menu == 'clients')}" (click)="changeMenu('clients')"  [routerLink]="'clients'">
-        {{ 'client-menu.Clients' | translate }}</a>
-    </li>
-    <li class="nav-item desktop">
-      <a class="nav-link " [ngClass]="{'active': (menu == 'otherservice')}" (click)="changeMenu('otherservice')"  [routerLink]="'otherservice'">
-        {{ 'client-menu.OtherService' | translate }}</a>
-    </li>
+      </li>
       <li class="nav-item desktop">
-        <a class="nav-link " [ngClass]="{'active': (menu == 'aboutus')}" (click)="changeMenu('aboutus')" [routerLink]="'aboutus'">
+        <a class="nav-link " [ngClass]="{'active': (menu == 'otherservice')}" (click)="changeMenu('otherservice')"
+          [routerLink]="'otherservice'">
+          {{ 'client-menu.OtherService' | translate }}</a>
+      </li>
+      <li class="nav-item desktop">
+        <a class="nav-link " [ngClass]="{'active': (menu == 'clients')}" (click)="changeMenu('clients')"
+          [routerLink]="'clients'">
+          {{ 'client-menu.Clients' | translate }}</a>
+      </li>
+
+      <li class="nav-item desktop">
+        <a class="nav-link " [ngClass]="{'active': (menu == 'aboutus')}" (click)="changeMenu('aboutus')"
+          [routerLink]="'aboutus'">
           {{ 'client-menu.AboutUs' | translate }}</a>
       </li>
       <li class="nav-item desktop">
-        <a class="nav-link " [ngClass]="{'active': (menu == 'contactus')}" (click)="changeMenu('contactus')"  [routerLink]="'contactus'">
+        <a class="nav-link " [ngClass]="{'active': (menu == 'contactus')}" (click)="changeMenu('contactus')"
+          [routerLink]="'contactus'">
           {{ 'client-menu.ContactUs' | translate }}</a>
       </li>
 
+
       <li class="nav-item dropdown mobile" data-toggle="collapse" data-target="#navbarTogglerDemo01">
-        <a class="nav-link " *ngIf="construction.length == 0" (click)="changeMenu('construction')" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{ 'client-menu.construction' | translate }}
+        <a class="nav-link" *ngIf="Consultancy.length == 0" (click)="changeMenu('Consultancy')" href="#"
+          id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ 'client-menu.Consultancy' | translate }}
         </a>
-        <a class="nav-link dropdown-toggle" (click)="changeMenu('construction')"  *ngIf="construction.length > 0" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{ 'client-menu.construction' | translate }}
+        <a class="nav-link dropdown-toggle" href="#" *ngIf="Consultancy.length > 0" id="navbarDropdown2" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ 'client-menu.Consultancy' | translate }}
         </a>
-        <div class="dropdown-menu"  *ngIf="construction.length > 0" aria-labelledby="navbarDropdown" >
-          <a *ngFor="let construction of construction" class="dropdown-item" [routerLink]="'construction/'+  construction.category.trim()">{{construction.category}}</a>
+        <div class="dropdown-menu" *ngIf="Consultancy.length > 0" aria-labelledby="navbarDropdown2">
+          <a *ngFor="let environmental of Consultancy" class="dropdown-item"
+            [routerLink]="'Consultancy/'+  Consultancy.category">{{environmental.category}}</a>
         </div>
       </li>
       <li class="nav-item dropdown mobile" data-toggle="collapse" data-target="#navbarTogglerDemo01">
-        <a class="nav-link"  *ngIf="environmental.length == 0" (click)="changeMenu('construction')" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{ 'client-menu.environmental' | translate }}
+        <a class="nav-link " *ngIf="construction.length == 0" (click)="changeMenu('construction')" href="#"
+          id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ 'client-menu.construction' | translate }}
         </a>
-          <a class="nav-link dropdown-toggle" href="#"  *ngIf="environmental.length > 0" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{ 'client-menu.environmental' | translate }}
-          </a>
-          <div class="dropdown-menu" *ngIf="environmental.length > 0" aria-labelledby="navbarDropdown2" >
-            <a *ngFor="let environmental of environmental" class="dropdown-item"  [routerLink]="'environmental/'+  environmental.category" >{{environmental.category}}</a>
-          </div>
-      </li>
-      <li class="nav-item dropdown mobile" data-toggle="collapse" data-target="#navbarTogglerDemo01">
-        <a class="nav-link" href="#" *ngIf="medical.length == 0" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{ 'client-menu.medical' | translate }}
+        <a class="nav-link dropdown-toggle" (click)="changeMenu('construction')" *ngIf="construction.length > 0"
+          href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ 'client-menu.construction' | translate }}
         </a>
-        <a class="nav-link dropdown-toggle" *ngIf="medical.length > 0" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          {{ 'client-menu.medical' | translate }}
-        </a>
-        <div class="dropdown-menu" *ngIf="medical.length > 0" aria-labelledby="navbarDropdown3" >
-          <a *ngFor="let medical of medical" class="dropdown-item" [routerLink]="'medical/'+  medical.category">{{medical.category}}</a>
+        <div class="dropdown-menu" *ngIf="construction.length > 0" aria-labelledby="navbarDropdown">
+          <a *ngFor="let construction of construction" class="dropdown-item"
+            [routerLink]="'construction/'+  construction.category.trim()">{{construction.category}}</a>
         </div>
-    </li>
-    <li class="nav-item mobile" data-toggle="collapse" data-target="#navbarTogglerDemo01">
-      <a class="nav-link " [ngClass]="{'active': (menu == 'clients')}" (click)="changeMenu('clients')"  [routerLink]="'clients'">
-        {{ 'client-menu.Clients' | translate }}</a>
-    </li>
-    <li class="nav-item mobile" data-toggle="collapse" data-target="#navbarTogglerDemo01">
-      <a class="nav-link " [ngClass]="{'active': (menu == 'otherservice')}" (click)="changeMenu('otherservice')"  [routerLink]="'otherservice'">
-        {{ 'client-menu.OtherService' | translate }}</a>
-    </li>
+      </li>
       <li class="nav-item mobile" data-toggle="collapse" data-target="#navbarTogglerDemo01">
-        <a class="nav-link " [ngClass]="{'active': (menu == 'aboutus')}" (click)="changeMenu('aboutus')" [routerLink]="'aboutus'">
+        <a class="nav-link " [ngClass]="{'active': (menu == 'otherservice')}" (click)="changeMenu('otherservice')"
+          [routerLink]="'otherservice'">
+          {{ 'client-menu.OtherService' | translate }}</a>
+      </li>
+      <li class="nav-item mobile" data-toggle="collapse" data-target="#navbarTogglerDemo01">
+        <a class="nav-link " [ngClass]="{'active': (menu == 'clients')}" (click)="changeMenu('clients')"
+          [routerLink]="'clients'">
+          {{ 'client-menu.Clients' | translate }}</a>
+      </li>
+     
+      <li class="nav-item mobile" data-toggle="collapse" data-target="#navbarTogglerDemo01">
+        <a class="nav-link " [ngClass]="{'active': (menu == 'aboutus')}" (click)="changeMenu('aboutus')"
+          [routerLink]="'aboutus'">
           {{ 'client-menu.AboutUs' | translate }}</a>
       </li>
       <li class="nav-item mobile" data-toggle="collapse" data-target="#navbarTogglerDemo01">
-        <a class="nav-link " [ngClass]="{'active': (menu == 'contactus')}" (click)="changeMenu('contactus')"  [routerLink]="'contactus'">
+        <a class="nav-link " [ngClass]="{'active': (menu == 'contactus')}" (click)="changeMenu('contactus')"
+          [routerLink]="'contactus'">
           {{ 'client-menu.ContactUs' | translate }}</a>
       </li>
-     
+
     </ul>
     <a href="#" class='mr-1 phone'> <i class="fa fa-phone" aria-hidden="true"></i>
       {{ 'global.phone' | translate }}</a>

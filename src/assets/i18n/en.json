@@ -8,8 +8,8 @@
   },
   "admin-menu": {
     "construction": "CONSTRUCTION",
-    "environmental": "ENVIRONMENTAL",
-    "medical": "MEDICAL",
+    "environmental": "CONSULTANCY",
+    "medical": "MEDICAL ASSISTANT",
     "server": "Server",
     "logout": "Log Out"
   },
@@ -18,22 +18,26 @@
     "category": "Category"
   },
   "client-menu": {
-    "construction": "Construction",
-    "environmental": "Environmental",
-    "medical": "Medical",
-    "AboutUs": "About Us",
-    "ContactUs": "Contact Us",
-    "Clients":"Clients",
-    "OtherService":"Other Service"
+    "Consultancy": "CONSULTANCY",
+    "construction": "CONSTRUCTION",
+    "AboutUs": "ABOUT COMPANY",
+    "ContactUs": "CONTACT US",
+    "Clients":"CLIENTS",
+    "OtherService":"OTHER SERVICES"
   },
   "AboutUs": {
+    "company": "MANTHAN SETU PATH ENGINEERS & CONSULTANT",
+    "AboutCompany_1":"having registered office at Delhi, F-1, Floor-III, Dilshad Colony, NewDelhi-110095(India). And Branch office at Paritosh, Shanti Niketan, Street No. 4, Opp. Janta Dairy, Raiya road, Rajkot – 360005 (Gujarat). This is infrastructure consultancy firm and founded in the year 2020. This organization is Partnership firm have vast experience in Detail Project Report, Design, Drawing, Project Management Consultancy. Founder of this firm have 36 years Railway , National Highway, Metro, Major Bridges, Flyovers, Buildings, Rail Coach factory, Industry and Hospital Projects experience from design to Hand over to Client in India, Nepal, Malaysia, Bangladesh. All projects are National pride and time bound Projects. Founder of Firm have won various Award for timely completion of projects. We are growing as leading provider of services to corporate, governments and development organizations in the infrastructure sector.",
+    "AboutCompany_2":"The founders & the key personnel’s of the company are very experienced professionals having Civil Engineering background specializing in designing, Supervision, Detailed project Reports of multistoried Structures, Bridges & Roads, Railway projects,. Our teams of engineers, planners and other professionals work with the highest integrity to deliver sustained business value to our clients. Many of our existing clients come back to us to get solutions to their challenging assignments.",
     "RoadMapTitle": "ROADMAP TO SUCCESS",
     "RoadMapDescription1": "We aim to achieve long term sustainable growth PMC Contractor by adding true value to our customers and empowering them with cutting edge engineering, cost effective procurement and class construction services topped with our numerous years of Civil Engineering experience. We strive to be true partners to all our customers and help them achieve success through our innovative solutions.",
     "RoadMapDescription2": " We strive to be true partners to all our customers and help them achieve success through our innovative solutions.",
     "Awards": "Awards & Certificates",
     "AwardsDescription": "Lean Six Sigma green Belt",
     "DirectorDesk": "Director Desk",
-    "DirectorDeskDescription": "Mr. Er. Vijay Kumar Sharma Determined Civil Engineer, farsighted businessman. Er. Vijay Kumar Sharma established Manthan Setu Path Engineer & Consultant in Gujarat in 2020."
+    "DirectorDeskDescription1": "He is Ex. Officer of IRCON International Ltd., (PSU of Railways) have vast experience in Construction, maintenance and Design of mega Projects like Railway Track, Yard, Bridges, Rail Coach factory, Precast yard, ROB with open and Pile foundations, Roads, Buildings, Hospital, Administrative Buildings etc.",
+    "DirectorDeskDescription2": "He has 27 years experience of Govt. sectors like Railways, Metro, Road and Highways, Bridges and Flyovers, Indian Railway Station Development Corporation. Since 2014, have started own consultancy company and successfully operating the same.He has experience of construction in Malaysia, Bangladesh and Nepal.",
+    "DirectorDeskDescription3": "At present, firm have various Projects of Roads, Bridges, Flyover, ROB, RUB and Suarastra University."
   },
   "Contactus": {
     "phone": "Phone",
@@ -43,11 +47,11 @@
     "name": "Name",
     "message": "Message",
     "submit": "Submit",
-    "Address":"24-C, Nivedita housing society, Opposite shivalik-8, Chandan park main road, Rajkot 360005 Gujarat."
+    "Address":"Paritosh, Shanti Niketan, Street No. 4, Opp Janata Dairy, Raiya Road, Rajkot 360005 Gujarat."
   },
   "global": {
     "email": "manthansetu@gmail.com",
-    "phone": "+91-8320693151"
+    "phone": "+91-9426601784"
   },
   "Service": {
     "ServiceTitle": "Services"

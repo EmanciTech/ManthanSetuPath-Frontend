@@ -15,25 +15,22 @@ export class HomeComponent implements OnInit {
 
 }
 
-$(document).ready(function() {
+// $(document).ready(function() {
 
-  $(window).scroll(function() {
+//   $(window).scroll(function() {
 
-      var titleHeight = $('.fadeInBlockLeft').position().top + $('.fadeInBlockLeft').outerHeight();
-      var firstSection = $('.fadeInBlockRight').position().top + $('.fadeInBlockRight').outerHeight();
-      var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-
-      bottom_of_window = bottom_of_window + 50;
-
-      if (bottom_of_window > titleHeight) {
-        $('.fadeInBlockLeft').addClass("animated");
-        $('.fadeInBlockLeft').addClass("slideInLeft");
-      }
-      if (bottom_of_window > firstSection) {
-        $('.fadeInBlockRight').addClass("animated");
-        $('.fadeInBlockRight').addClass("fadeInRight");
-      }
+//       var titleHeight = $('.fadeInBlockLeft').position().top + $('.fadeInBlockLeft').outerHeight();
+//       var firstSection = $('.fadeInBlockRight').position().top + $('.fadeInBlockRight').outerHeight();
+//       var bottom_of_window = $(window).scrollTop() + $(window).height();
+//       // bottom_of_window = bottom_of_window + 2;
+//       if (bottom_of_window > titleHeight) {
+//         $('.fadeInBlockLeft').addClass("animated");
+//         $('.fadeInBlockLeft').addClass("fadeInUp");
+//       }
+//       if (bottom_of_window > firstSection) {
+//         $('.fadeInBlockRight').addClass("animated");
+//         $('.fadeInBlockRight').addClass("fadeInUp");
+//       }
   
-  });
-});
+//   });
+// });

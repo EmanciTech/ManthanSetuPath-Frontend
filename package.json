@@ -24,6 +24,7 @@
     "@ng-bootstrap/ng-bootstrap": "^6.1.0",
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^6.0.0",
+    "aos": "^2.3.4",
     "bootstrap": "^4.5.0",
     "classlist.js": "^1.1.20150312",
     "jquery": "^3.5.1",
