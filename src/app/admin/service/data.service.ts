@@ -14,6 +14,12 @@ export class DataService {
 
   constructor(private httpClient: HttpClient) { }
 
+  public login(data: any): Observable < any > {
+    return this.httpClient
+      .post(this.server + '/login', data)
+      .pipe(catchError(this.handleError));
+  }
+
   public getDashboard(): Observable < any > {
     return this.httpClient
       .get(this.server + '/dashboard')

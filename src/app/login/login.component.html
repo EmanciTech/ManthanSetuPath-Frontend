@@ -9,27 +9,27 @@
         <div class="sign-in-htm">
           <div class="group">
             <label for="loginuser" class="label">{{ 'login.usernmoremail' | translate }}</label>
-            <input id="loginuser" type="text" class="input">
+            <input id="loginuser" type="text" class="input" [(ngModel)]="username">
           </div>
           <div class="group">
             <label for="pass" class="label">{{ 'login.passwd' | translate }}</label>
-            <input id="pass" type="password" class="input" data-type="password">
+            <input id="pass" type="password" class="input" data-type="password" [(ngModel)]="password">
           </div>
           <div class="hr"></div>
           <div class="group">
-            <button type="button" class="btn btn-primary btn-lg btn-block login-btn"
-              [routerLink]="'/admin'">{{ 'login.signin' | translate }}</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block login-btn" [disabled]="!username || !password"
+              (click)="signin()">{{ 'login.signin' | translate }}</button>
           </div>
         </div>
         <div class="for-pwd-htm">
           <div class="group">
             <label for="resetuser" class="label">{{ 'login.usernmoremail' | translate }}</label>
-            <input id="resetuser" type="text" class="input">
+            <input id="resetuser" type="text" class="input" [(ngModel)]="email">
           </div>
           <div class="hr"></div>
           <div class="group">
-            <button type="button"
-              class="btn btn-primary btn-lg btn-block login-btn">{{ 'login.rstpasswd' | translate }}</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block login-btn"
+              (click)="reset()">{{ 'login.rstpasswd' | translate }}</button>
           </div>
         </div>
       </div>
