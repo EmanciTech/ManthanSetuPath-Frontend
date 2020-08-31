@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../service/data.service';
 
 @Component({
-  selector: 'app-medical',
-  templateUrl: './medical.component.html',
-  styleUrls: ['./medical.component.scss']
+  selector: 'app-consultancy',
+  templateUrl: './consultancy.component.html',
+  styleUrls: ['./consultancy.component.scss']
 })
-export class MedicalComponent implements OnInit {
+export class ConsultancyComponent implements OnInit {
 
-  public collection = 'medical';
+  public collection = 'consultancy';
   public category = '';
   public categoryObj = {};
   public oldCategory = '';

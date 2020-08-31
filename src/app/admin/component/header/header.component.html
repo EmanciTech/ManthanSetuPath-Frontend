@@ -11,19 +11,24 @@
   <div class="collapse navbar-collapse" id="navbarToggler">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active desktop">
+        <a class="nav-link nav-link-fade-up" (click)="changeMenu('consultancy')" [ngClass]="{'active': (menu == 'consultancy')}"
+          [routerLink]="'consultancy'">{{ 'admin-menu.consultancy' | translate }}
+          <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active desktop">
         <a class="nav-link nav-link-fade-up" (click)="changeMenu('construction')" [ngClass]="{'active': (menu == 'construction')}"
           [routerLink]="'construction'">{{ 'admin-menu.construction' | translate }} <span
             class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active desktop">
-        <a class="nav-link nav-link-fade-up" (click)="changeMenu('environmental')" [ngClass]="{'active': (menu == 'environmental')}"
-          [routerLink]="'environmental'">{{ 'admin-menu.environmental' | translate }}
-          <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active desktop">
-        <a class="nav-link nav-link-fade-up" (click)="changeMenu('medical')" [ngClass]="{'active': (menu == 'medical')}"
-          [routerLink]="'medical'">{{ 'admin-menu.medical' | translate }} <span
+        <a class="nav-link nav-link-fade-up" (click)="changeMenu('otherservices')" [ngClass]="{'active': (menu == 'otherservices')}"
+          [routerLink]="'otherservices'">{{ 'admin-menu.otherservices' | translate }} <span
             class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active mobile" data-toggle="collapse" data-target="#navbarToggler">
+        <a class="nav-link"
+          [routerLink]="'consultancy'">{{ 'admin-menu.consultancy' | translate }}
+          <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active mobile" data-toggle="collapse" data-target="#navbarToggler">
         <a class="nav-link"
@@ -32,12 +37,7 @@
       </li>
       <li class="nav-item active mobile" data-toggle="collapse" data-target="#navbarToggler">
         <a class="nav-link"
-          [routerLink]="'environmental'">{{ 'admin-menu.environmental' | translate }}
-          <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active mobile" data-toggle="collapse" data-target="#navbarToggler">
-        <a class="nav-link"
-          [routerLink]="'medical'">{{ 'admin-menu.medical' | translate }} <span
+          [routerLink]="'otherservices'">{{ 'admin-menu.otherservices' | translate }} <span
             class="sr-only">(current)</span></a>
       </li>
     </ul>

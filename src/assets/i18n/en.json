@@ -7,10 +7,10 @@
     "rstpasswd": "Reset Password"
   },
   "admin-menu": {
+    "consultancy": "CONSULTANCY",
     "construction": "CONSTRUCTION",
-    "environmental": "CONSULTANCY",
-    "medical": "MEDICAL ASSISTANT",
-    "server": "Server",
+    "otherservices": "OTHER SERVICES",
+    "server": "SERVER",
     "logout": "Log Out"
   },
   "dashboard": {

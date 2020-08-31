@@ -5,13 +5,13 @@ import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { ContentComponent } from './component/content/content.component';
 import { ConstructionComponent } from './component/construction/construction.component';
-import { EnvironmentalComponent } from './component/environmental/environmental.component';
-import { MedicalComponent } from './component/medical/medical.component';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ConsultancyComponent } from './component/consultancy/consultancy.component';
+import { OtherServicesComponent } from './component/other-services/other-services.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +20,9 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     ContentComponent,
     ConstructionComponent,
-    EnvironmentalComponent,
-    MedicalComponent,
-    DashboardComponent
+    DashboardComponent,
+    ConsultancyComponent,
+    OtherServicesComponent
   ],
   imports: [
     CommonModule,

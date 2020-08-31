@@ -5,8 +5,8 @@ import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { DashboardComponent } from './admin/component/dashboard/dashboard.component';
 import { ConstructionComponent } from './admin/component/construction/construction.component';
-import { EnvironmentalComponent } from './admin/component/environmental/environmental.component';
-import { MedicalComponent } from './admin/component/medical/medical.component';
+import { ConsultancyComponent } from './admin/component/consultancy/consultancy.component';
+import { OtherServicesComponent } from './admin/component/other-services/other-services.component';
 import { ClientComponent } from './client/client.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
@@ -18,8 +18,6 @@ import { ContactusComponent } from './client/component/contactus/contactus.compo
 import { HomeComponent } from './client/component/home/home.component';
 import { ClientsComponent } from './client/component/clients/clients.component';
 import { OtherserviceComponent } from './client/component/otherservice/otherservice.component';
-import { ServiceComponent} from './client/component/service/service.component';
-import { from } from 'rxjs';
 
 const routes: Routes = [
   {
@@ -39,11 +37,12 @@ const routes: Routes = [
     path: 'admin', component: AdminComponent, canActivate: [AuthGuard],
     children: [
       { path: '', component: DashboardComponent, canActivate: [AuthGuard] },
-      { path: 'construction', component: ConstructionComponent },
-      { path: 'environmental', component: EnvironmentalComponent },
-      { path: 'medical', component: MedicalComponent }
+      { path: 'consultancy', component: ConsultancyComponent, canActivate: [AuthGuard] },
+      { path: 'construction', component: ConstructionComponent, canActivate: [AuthGuard] },
+      { path: 'otherservices', component: OtherServicesComponent, canActivate: [AuthGuard] }
     ]
   },
+  { path: 'admin-login', component: LoginComponent },
   { path: 'unauthorized', component: UnauthorizedComponent },
   { path: '**', component: PagenotfoundComponent }
 ];

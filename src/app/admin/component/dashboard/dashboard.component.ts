@@ -9,8 +9,8 @@ import { DataService } from '../../service/data.service';
 export class DashboardComponent implements OnInit {
 
   public construction = 0;
-  public environmental = 0;
-  public medical = 0;
+  public consultancy = 0;
+  public otherservices = 0;
   public server = 0;
 
   constructor(private service: DataService) { }
@@ -28,14 +28,14 @@ export class DashboardComponent implements OnInit {
             this.construction += item['records']
             this.server += item['records']
           })
-          let environmentalArray = data['data']['environmental'];
-          environmentalArray.forEach((item) => {
-            this.environmental += item['records']
+          let consultancyArray = data['data']['consultancy'];
+          consultancyArray.forEach((item) => {
+            this.consultancy += item['records']
             this.server += item['records']
           })
-          let medicalArray = data['data']['medical'];
-          medicalArray.forEach((item) => {
-            this.medical += item['records']
+          let otherservicesArray = data['data']['otherservices'];
+          otherservicesArray.forEach((item) => {
+            this.otherservices += item['records']
             this.server += item['records']
           })
         },

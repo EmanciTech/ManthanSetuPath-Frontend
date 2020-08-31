@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../service/data.service';
 
 @Component({
-  selector: 'app-environmental',
-  templateUrl: './environmental.component.html',
-  styleUrls: ['./environmental.component.scss']
+  selector: 'app-other-services',
+  templateUrl: './other-services.component.html',
+  styleUrls: ['./other-services.component.scss']
 })
-export class EnvironmentalComponent implements OnInit {
+export class OtherServicesComponent implements OnInit {
 
-  public collection = 'environmental';
+  public collection = 'otherservices';
   public category = '';
   public categoryObj = {};
   public oldCategory = '';
