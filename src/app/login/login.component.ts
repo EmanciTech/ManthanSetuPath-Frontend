@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
   username = '';
   password = '';
   email = '';
+  errormsg = false;
 
   constructor(private service: DataService, private router: Router) { }
 
@@ -29,6 +30,8 @@ export class LoginComponent implements OnInit {
         if (data.status) {
           sessionStorage.setItem('admin', 'true');
           this.router.navigate(['admin']);
+        } else {
+          this.errormsg = true;
         }
       },
       error => {

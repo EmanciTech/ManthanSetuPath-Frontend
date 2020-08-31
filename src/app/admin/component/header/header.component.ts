@@ -26,4 +26,9 @@ export class HeaderComponent implements OnInit {
     this.menu = menu;
   }
 
+  logout() {
+    sessionStorage.removeItem('admin');
+    this.router.navigate(['admin-login']);
+  }
+
 }

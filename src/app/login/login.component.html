@@ -9,16 +9,19 @@
         <div class="sign-in-htm">
           <div class="group">
             <label for="loginuser" class="label">{{ 'login.usernmoremail' | translate }}</label>
-            <input id="loginuser" type="text" class="input" [(ngModel)]="username">
+            <input id="loginuser" type="text" class="input" [(ngModel)]="username" (ngModelChange)="errormsg = false">
           </div>
           <div class="group">
             <label for="pass" class="label">{{ 'login.passwd' | translate }}</label>
-            <input id="pass" type="password" class="input" data-type="password" [(ngModel)]="password">
+            <input id="pass" type="password" class="input" data-type="password" [(ngModel)]="password" (ngModelChange)="errormsg = false">
           </div>
           <div class="hr"></div>
           <div class="group">
             <button type="button" class="btn btn-primary btn-lg btn-block login-btn" [disabled]="!username || !password"
               (click)="signin()">{{ 'login.signin' | translate }}</button>
+          </div>
+          <div *ngIf="errormsg" class="group errormsg">
+            Username Or Password is not correct.
           </div>
         </div>
         <div class="for-pwd-htm">
@@ -28,7 +31,7 @@
           </div>
           <div class="hr"></div>
           <div class="group">
-            <button type="button" class="btn btn-primary btn-lg btn-block login-btn"
+            <button type="button" class="btn btn-primary btn-lg btn-block login-btn" [disabled]="!email"
               (click)="reset()">{{ 'login.rstpasswd' | translate }}</button>
           </div>
         </div>
