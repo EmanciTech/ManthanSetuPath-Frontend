@@ -47,11 +47,12 @@
     "name": "Name",
     "message": "Message",
     "submit": "Submit",
-    "Address":"Paritosh, Shanti Niketan, Street No. 4, Opp Janata Dairy, Raiya Road, Rajkot 360005 Gujarat."
+    "Address":"'Paritosh'-Shanti Niketan Street No. 4 Opp. Janata Dairy, Raiya Road Rajkot-360005 (Gujarat)"
   },
   "global": {
     "email": "manthansetu@gmail.com",
-    "phone": "+91-9426601784"
+    "phone": "+91-9426601784",
+    "landlinePhone":"0281-3550015"
   },
   "Service": {
     "ServiceTitle": "Services"
