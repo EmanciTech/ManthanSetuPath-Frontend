@@ -2,22 +2,25 @@
 
 
 .carousel-item img {
-  max-width: 100%;
-  height: 574px;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // min-width: 100vw;
+  // height: 100vh;
+  width: 100%;
+  height: 620px;
+  max-width: none;
+  object-fit:cover;
+  object-position:center;
+}
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
 }
 
-// .fadeInBlockLeft {
-//   opacity: 0;
-//   margin-left: -300px;
-//   max-width: 100%;
-// }
-
-// .fadeInBlockRight {
-//   opacity: 0;
-//   margin-right: -300px;
-//   max-width: 100%;
-// }
-
+.carousel-indicators .active {
+  color:$headfoot !important;
+}
 .ProductFeaturesTitle {
   background-position: 50% 50%;
   background-repeat: no-repeat;
